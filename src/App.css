@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+/* Header */
+.navbar {
+  width: 100%;
+  padding: 5px 0;
+  background: #003151;
+  height: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar .nav-container {
+  display: flex;
+  align-items: center;
+  background: #598baf;
+  max-height: 60px;
+  padding: 0 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar .nav-heading p {
+  color: #000;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar .nav-heading p {
+    font-size: 22px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Products */
+.prod-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 13px;
+  margin-left: 20px;
+}
+
+.list-container {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  margin-left: 20px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.list-card {
+  display: flex;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  gap: .5rem;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
+  min-width: 30%;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 900px) {
+  .list-container {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .list-card {
+    padding: 0 10px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  margin-top: 5px;
+  gap: .3rem;
+  margin-left: 20px;
+}
+
+.breadcrumb .link:hover {
+  text-decoration: underline;
+  color: #598baf;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  gap: 3rem;
+}
+
+@media screen and (max-width: 900px) {
+  .details-container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.quantity-container {
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+  margin-top: 2px;
+}
+
+.cart-btn {
+  border-radius: 5px;
+  border: 1px solid #598baf;
+  padding: 5px 10px;
+  text-align: center;
+  width: 140px;
+  cursor: pointer;
+  background: #598baf;
 }
